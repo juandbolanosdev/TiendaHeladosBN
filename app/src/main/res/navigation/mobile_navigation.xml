@@ -31,4 +31,9 @@
         android:name="com.example.bottomnavtienda.CommentFragment"
         android:label="fragment_comment"
         tools:layout="@layout/fragment_comment" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.bottomnavtienda.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
 </navigation>

@@ -8,4 +8,6 @@
     <dimen name="small_margin">8dp</dimen>
     <dimen name="incon_size">70dp</dimen>
     <dimen name="subtitle">18sp</dimen>
+    <dimen name="new_def_margin">20dp</dimen>
+    <dimen name="titulo_producto">20sp</dimen>
 </resources>
