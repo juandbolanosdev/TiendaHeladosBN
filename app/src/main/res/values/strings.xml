@@ -16,7 +16,6 @@
     <string name="Comment_title">Comentarios</string>
     <string name="title_profile">Perfil</string>
     <string name="description_image_user">Imagen usuario</string>
-
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imagen_de_producto">Imagen de producto</string>
 </resources>
