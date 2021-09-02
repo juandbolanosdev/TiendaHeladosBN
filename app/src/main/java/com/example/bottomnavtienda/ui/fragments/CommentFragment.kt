@@ -55,6 +55,7 @@ class CommentFragment : Fragment() {
             layoutManager = commentManager
         }
         commentViewModel.comments.observe(viewLifecycleOwner, Observer { comments ->
+            commentAdapter.newDataset(comments)
 
         })
     }
