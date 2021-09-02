@@ -1,10 +1,12 @@
-package com.example.bottomnavtienda
+package com.example.bottomnavtienda.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.bottomnavtienda.data.models.Product
 import com.example.bottomnavtienda.databinding.ItemProductBinding
+import com.example.bottomnavtienda.ui.listeners.OnProductListener
 
 class ProductAdapter(val items: List<Product>):RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 

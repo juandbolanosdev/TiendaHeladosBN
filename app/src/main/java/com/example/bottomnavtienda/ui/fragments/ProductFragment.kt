@@ -1,4 +1,4 @@
-package com.example.bottomnavtienda
+package com.example.bottomnavtienda.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.bottomnavtienda.R
+import com.example.bottomnavtienda.ui.listeners.OnProductListener
+import com.example.bottomnavtienda.ui.adapters.ProductAdapter
+import com.example.bottomnavtienda.data.models.Product
 import com.example.bottomnavtienda.databinding.FragmentProductBinding
 
 
@@ -42,7 +43,7 @@ class ProductFragment : Fragment() {
             )
 
         )
-        productAdapter.listener = object: OnProductListener{
+        productAdapter.listener = object: OnProductListener {
             override fun onClick(product: Product) {
                 Log.d("CLICK",product.name)
             }

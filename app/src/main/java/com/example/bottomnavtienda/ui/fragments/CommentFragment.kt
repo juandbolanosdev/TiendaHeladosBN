@@ -1,4 +1,4 @@
-package com.example.bottomnavtienda
+package com.example.bottomnavtienda.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.bottomnavtienda.ui.adapters.CommentAdapter
+import com.example.bottomnavtienda.ui.listeners.OnCommentListener
+import com.example.bottomnavtienda.data.models.Comment
 import com.example.bottomnavtienda.databinding.FragmentCommentBinding
 
 
@@ -40,7 +43,7 @@ class CommentFragment : Fragment() {
                 Comment("https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png","Pepito Bolaños","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500")
             )
         )
-        commentAdapter.listener = object : OnCommentListener{
+        commentAdapter.listener = object : OnCommentListener {
             override fun onClick(comment: Comment) {
                 Log.d("CLICK",comment.name)
             }

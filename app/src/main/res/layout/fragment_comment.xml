@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommentFragment"
+    tools:context=".ui.fragments.CommentFragment"
     android:layout_marginHorizontal="20dp">
 
     <TextView
