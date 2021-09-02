@@ -8,7 +8,7 @@ import com.example.bottomnavtienda.data.models.Product
 import com.example.bottomnavtienda.databinding.ItemProductBinding
 import com.example.bottomnavtienda.ui.listeners.OnProductListener
 
-class ProductAdapter(val items: List<Product>):RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class ProductAdapter(var items: List<Product>):RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     var listener: OnProductListener? = null
 
@@ -32,5 +32,10 @@ class ProductAdapter(val items: List<Product>):RecyclerView.Adapter<ProductAdapt
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    fun newDataSet(products:List<Product>){
+        items=products
+        notifyDataSetChanged()
     }
 }
