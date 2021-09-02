@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.bottomnavtienda.R
 import com.example.bottomnavtienda.ui.listeners.OnProductListener
 import com.example.bottomnavtienda.ui.adapters.ProductAdapter
 import com.example.bottomnavtienda.data.models.Product
@@ -46,6 +48,7 @@ class ProductFragment : Fragment() {
         productAdapter.listener = object: OnProductListener {
             override fun onClick(product: Product) {
                 Log.d("CLICK",product.name)
+                findNavController().navigate(R.id.action_productFragment_to_productDetailFragment)
             }
 
         }
