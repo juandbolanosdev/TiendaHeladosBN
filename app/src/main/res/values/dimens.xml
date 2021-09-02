@@ -10,4 +10,5 @@
     <dimen name="subtitle">18sp</dimen>
     <dimen name="new_def_margin">20dp</dimen>
     <dimen name="titulo_producto">20sp</dimen>
+    <dimen name="image_size">200dp</dimen>
 </resources>

@@ -11,10 +11,10 @@
         android:icon="@drawable/ic_baseline_comment_bank_24"
         android:title="@string/title_dashboard" />
 
-   <!---<item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" /> -->
+   <item
+        android:id="@+id/navigation_products"
+        android:icon="@drawable/ic_baseline_filter_products"
+        android:title="@string/products_view" />
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_baseline_person_24"

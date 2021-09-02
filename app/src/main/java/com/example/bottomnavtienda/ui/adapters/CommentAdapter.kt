@@ -1,14 +1,16 @@
-package com.example.bottomnavtienda
+package com.example.bottomnavtienda.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.bottomnavtienda.data.models.Comment
 import com.example.bottomnavtienda.databinding.ItemCommentBinding
+import com.example.bottomnavtienda.ui.listeners.OnCommentListener
 
 class CommentAdapter(val items:List<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
 
-    var listener:OnCommentListener? = null
+    var listener: OnCommentListener? = null
 
     class ViewHolder(val view: ItemCommentBinding): RecyclerView.ViewHolder(view.root)
 

@@ -1,4 +1,4 @@
-package com.example.bottomnavtienda
+package com.example.bottomnavtienda.data.models
 
 data class Product (
     val name:String,
