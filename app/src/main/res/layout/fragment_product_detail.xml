@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/profile_title"
+        android:id="@+id/detail_product_title"
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_marginHorizontal="@dimen/fab_margin"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -17,44 +17,44 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        tools:text="@string/Profile_title"
+        tools:text="@string/product_detail"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textAlignment="center"/>
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/product_detail_image"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
         android:layout_marginTop="@dimen/fab_margin"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_title"
+        app:layout_constraintTop_toBottomOf="@id/detail_product_title"
 
         tools:srcCompat="@mipmap/ic_launcher">
 
     </com.google.android.material.imageview.ShapeableImageView>
 
     <TextView
-        android:id="@+id/profile_name"
+        android:id="@+id/detail_product_price"
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_marginHorizontal="@dimen/fab_margin"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/product_detail_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Juan David Bolaños"
+        tools:text="$8000"
         android:textSize="20sp"/>
     <TextView
-        android:id="@+id/profile_email"
+        android:id="@+id/detail_product_description"
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_marginHorizontal="@dimen/fab_margin"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/detail_product_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="juandbolanos1094@gmail.com"
+        tools:text="@string/lorem_1"
         android:textSize="20sp"/>
 
 

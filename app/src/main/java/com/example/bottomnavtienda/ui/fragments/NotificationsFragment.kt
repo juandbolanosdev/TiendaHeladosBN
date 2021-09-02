@@ -1,4 +1,4 @@
-package com.example.bottomnavtienda.ui.notifications
+package com.example.bottomnavtienda.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.bottomnavtienda.R
 import com.example.bottomnavtienda.databinding.FragmentNotificationsBinding
+import com.example.bottomnavtienda.ui.notifications.NotificationsViewModel
 
 class NotificationsFragment : Fragment() {
 
@@ -24,7 +24,7 @@ class NotificationsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         notificationsViewModel =
             ViewModelProvider(this).get(NotificationsViewModel::class.java)
 

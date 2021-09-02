@@ -21,4 +21,6 @@
     <string name="Store_title">THC-Store</string>
     <string name="lorem_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus viverra diam, id ultrices magna scelerisque sed. Morbi ultricies interdum augue fermentum dictum. Cras venenatis ante non nulla gravida, nec ultrices magna posuere. Donec id ante vitae purus tincidunt blandit eget eu augue.</string>
     <string name="products_view">Productos</string>
+    <string name="Profile_title">Perfil</string>
+    <string name="product_detail">Detalle del producto</string>
 </resources>

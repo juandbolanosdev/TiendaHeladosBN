@@ -8,7 +8,7 @@ import com.example.bottomnavtienda.data.models.Comment
 import com.example.bottomnavtienda.databinding.ItemCommentBinding
 import com.example.bottomnavtienda.ui.listeners.OnCommentListener
 
-class CommentAdapter(val items:List<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
+class CommentAdapter(var items:List<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
 
     var listener: OnCommentListener? = null
 
@@ -33,6 +33,11 @@ class CommentAdapter(val items:List<Comment>): RecyclerView.Adapter<CommentAdapt
 
     override fun getItemCount(): Int {
         return items.size
+    }
+    fun newDataset(comments: List<Comment>){
+
+        items= comments
+        notifyDataSetChanged()
     }
 
 }

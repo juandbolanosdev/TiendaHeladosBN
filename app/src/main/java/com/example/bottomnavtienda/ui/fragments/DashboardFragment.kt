@@ -1,4 +1,4 @@
-package com.example.bottomnavtienda.ui.dashboard
+package com.example.bottomnavtienda.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.bottomnavtienda.R
 import com.example.bottomnavtienda.databinding.FragmentDashboardBinding
+import com.example.bottomnavtienda.ui.dashboard.DashboardViewModel
 
 class DashboardFragment : Fragment() {
 
@@ -24,7 +24,7 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         dashboardViewModel =
             ViewModelProvider(this).get(DashboardViewModel::class.java)
 

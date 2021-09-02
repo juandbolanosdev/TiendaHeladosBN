@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bottomnavtienda.ui.adapters.CommentAdapter
 import com.example.bottomnavtienda.ui.listeners.OnCommentListener
 import com.example.bottomnavtienda.data.models.Comment
 import com.example.bottomnavtienda.databinding.FragmentCommentBinding
+import com.example.bottomnavtienda.ui.viewmodels.CommentViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class CommentFragment : Fragment() {
@@ -18,6 +21,8 @@ class CommentFragment : Fragment() {
     private var _binding: FragmentCommentBinding? = null
 
     private val binding get() = _binding!!
+
+    private val commentViewModel: CommentViewModel by viewModel()
 
     private lateinit var commentAdapter: CommentAdapter
     private lateinit var commentManager: LinearLayoutManager
@@ -37,22 +42,21 @@ class CommentFragment : Fragment() {
 
         commentManager = LinearLayoutManager(requireContext())
         commentAdapter = CommentAdapter(
-            listOf(
-                Comment("https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png","Pepito Perez","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500"),
-                Comment("https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png","Juanito Perez","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500"),
-                Comment("https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png","Pepito Bolaños","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500")
-            )
+            listOf()
         )
         commentAdapter.listener = object : OnCommentListener {
             override fun onClick(comment: Comment) {
                 Log.d("CLICK",comment.name)
             }
         }
-
+        commentViewModel.loadComments()
         binding.commentRecycler.apply {
             adapter = commentAdapter
             layoutManager = commentManager
         }
+        commentViewModel.comments.observe(viewLifecycleOwner, Observer { comments ->
+
+        })
     }
 
 }
