@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -12,33 +12,26 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/commentFragment"
+        android:id="@+id/navigation_comments"
         android:name="com.example.bottomnavtienda.ui.fragments.CommentFragment"
-        android:label="fragment_comment"
+        android:label="Comentarios"
         tools:layout="@layout/fragment_comment" />
+
     <fragment
-        android:id="@+id/productFragment"
+        android:id="@+id/navigation_products"
         android:name="com.example.bottomnavtienda.ui.fragments.ProductFragment"
-        android:label="fragment_product"
+        android:label="Productos"
         tools:layout="@layout/fragment_product" >
         <action
             android:id="@+id/action_productFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/navigation_profile"
         android:name="com.example.bottomnavtienda.ui.fragments.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Perfil"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.bottomnavtienda.ui.fragments.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_productFragment"
-            app:destination="@id/productFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="com.example.bottomnavtienda.ui.fragments.ProductDetailFragment"

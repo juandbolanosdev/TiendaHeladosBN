@@ -1,8 +1,13 @@
 package com.example.bottomnavtienda.data.models
 
-data class Product (
-    val name:String,
-    val image:String,
-    val price:String,
-    val description:String = ""
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Product(
+    @PrimaryKey var id: Int? = null,
+    var image: String? = null,
+    var name: String? = null,
+    var price: String? = null,
+    var description: String? = null
 )

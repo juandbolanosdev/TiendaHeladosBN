@@ -1,10 +1,15 @@
 package com.example.bottomnavtienda.data.models
 
-import android.graphics.drawable.AnimatedImageDrawable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-data class StoreInfo (
-    val name:String,
-    val image:String,
-    val address:String,
-    val description:String
+@Entity
+data class StoreInfo(
+    @PrimaryKey var id: Int? = null,
+    var name: String? = null,
+    var image: String? = null,
+    var address: String? = null,
+    var description: String? = null,
+    var lat: Double? = null,
+    var lng: Double? = null
 )

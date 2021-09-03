@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "735209646585",
+    "project_id": "tiendacan-e56c1",
+    "storage_bucket": "tiendacan-e56c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735209646585:android:fa8bedacee14525cd17528",
+        "android_client_info": {
+          "package_name": "com.example.bottomnavtienda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735209646585-bjv7laafr32fvprrjk0ejmo1pt2eds7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjRlLqigmOWQ0gz5jPN3KGPepSXhyUnAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735209646585-bjv7laafr32fvprrjk0ejmo1pt2eds7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
