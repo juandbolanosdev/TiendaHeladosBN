@@ -3,12 +3,13 @@ package com.example.bottomnavtienda.data.mocks
 import com.example.bottomnavtienda.data.models.StoreInfo
 
 class StoreInfoMock {
-    fun loadStoreInfo(): StoreInfo{
+    fun loadStoreInfo(): StoreInfo {
         return StoreInfo(
-            "mi tienda",
-            "https://w7.pngwing.com/pngs/834/30/png-transparent-medical-cannabis-medical-marijuana-card-cannabis-shop-dispensary-cannabis.png",
-            "calle falsa 123",
-            "Loremasmd ajsdjasjd ajsjdj q qwejqwijas qwejdfna asdjasdjq qwejqwehrjasd ajsdjasdjasd jasdjajsdasdj jasdjasdj"
+            1,
+            "Mi tienda mictic",
+            "https://w7.pngwing.com/pngs/80/585/png-transparent-post-board-gaming-logo-brand-hobby-shop-organization-post-card-text-logo-video-game.png",
+            "Calle falsa 123",
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         )
     }
 }

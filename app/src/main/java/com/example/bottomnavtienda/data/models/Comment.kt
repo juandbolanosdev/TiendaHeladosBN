@@ -1,7 +1,12 @@
 package com.example.bottomnavtienda.data.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class Comment(
-    val image:String,
-    val name:String,
-    val message:String
+    @PrimaryKey var id: Int? = null,
+    var image: String? = null,
+    var name: String? = null,
+    var message: String? = null
 )
