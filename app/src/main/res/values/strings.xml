@@ -23,4 +23,14 @@
     <string name="products_view">Productos</string>
     <string name="Profile_title">Perfil</string>
     <string name="product_detail">Detalle del producto</string>
+    <string name="email_label">Correo electronico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="login_title">Inicio de sesión</string>
+    <string name="sign_up_label">No tienes cuenta</string>
+    <string name="name_label">Nombres</string>
+    <string name="sign_up_text_label">Registrate</string>
+    <string name="log_out_label">Cerrar sesión</string>
+
+
+
 </resources>

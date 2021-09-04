@@ -46,7 +46,7 @@ class CommentFragment : Fragment() {
         )
         commentAdapter.listener = object : OnCommentListener {
             override fun onClick(comment: Comment) {
-                Log.d("CLICK",comment.name)
+               // Log.d("CLICK",comment.name)
             }
         }
         commentViewModel.loadComments()

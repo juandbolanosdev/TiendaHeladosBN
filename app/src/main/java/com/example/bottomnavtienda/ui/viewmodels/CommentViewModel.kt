@@ -8,12 +8,13 @@ import com.example.bottomnavtienda.data.models.Comment
 import com.example.bottomnavtienda.data.repositories.CommentRepository
 import kotlinx.coroutines.launch
 
-class CommentViewModel(private val repo: CommentRepository):ViewModel() {
+class CommentViewModel(private val repo: CommentRepository): ViewModel() {
     private var _comments: MutableLiveData<List<Comment>> = MutableLiveData()
-    val comments: LiveData<List<Comment>> get() = comments
-    fun loadComments(){
+    val comments: LiveData<List<Comment>> get() = _comments
+
+    fun loadComments() {
         viewModelScope.launch {
-            _comments.postValue(repo.loadComment())
+            _comments.postValue(repo.loadComments())
         }
     }
 }

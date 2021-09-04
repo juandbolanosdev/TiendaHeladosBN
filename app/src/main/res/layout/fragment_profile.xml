@@ -56,6 +56,17 @@
         android:layout_height="wrap_content"
         tools:text="juandbolanos1094@gmail.com"
         android:textSize="20sp"/>
+    <Button
+        android:id="@+id/profile_logout"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out_label"
+        android:textSize="20sp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

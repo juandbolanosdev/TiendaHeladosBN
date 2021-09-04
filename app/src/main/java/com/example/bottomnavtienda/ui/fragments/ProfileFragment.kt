@@ -13,13 +13,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Observer
+import com.bumptech.glide.Glide
 import com.example.bottomnavtienda.databinding.FragmentProfileBinding
+import com.example.bottomnavtienda.ui.activities.LoginActivity
+import com.example.bottomnavtienda.ui.viewmodels.LoginViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+
+    private val loginViewModel: LoginViewModel by viewModel()
+
     private val REQUEST_CAMERA_PERMISSION = 1
     private val REQUEST_IMAGE = 2
 
@@ -37,6 +45,25 @@ class ProfileFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         checkPermission()
+
+        loginViewModel.loggedIn()
+        loginViewModel.user.observe(viewLifecycleOwner, Observer { user ->
+            if(user == null) {
+                val intent = Intent(requireContext(), LoginActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
+            } else {
+                binding.profileName.text =  user!!.displayName
+                if(user!!.photoUrl != null) {
+                    Glide.with(binding.root).load(user.photoUrl).into(binding.profileImage)
+                }
+            }
+        })
+
+        binding.profileLogout.setOnClickListener {
+            loginViewModel.logOut()
+        }
+
         binding.profileImage.setOnClickListener{
             if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED){
@@ -54,7 +81,8 @@ class ProfileFragment : Fragment() {
         if (resultCode == Activity.RESULT_OK){
             if(requestCode == REQUEST_IMAGE){
                 val bitmap = data?.extras?.get("data") as Bitmap
-                binding.profileImage.setImageBitmap(bitmap)
+               // binding.profileImage.setImageBitmap(bitmap)
+                loginViewModel.uploadImage(bitmap)
             }
         }
     }
