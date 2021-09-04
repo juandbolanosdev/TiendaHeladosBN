@@ -15,9 +15,9 @@
         android:id="@+id/navigation_products"
         android:icon="@drawable/ic_baseline_filter_products"
         android:title="@string/products_view" />
-    <!--<item
+    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="@string/title_profile" /> -->
+        android:title="@string/title_profile" />
 
 </menu>
