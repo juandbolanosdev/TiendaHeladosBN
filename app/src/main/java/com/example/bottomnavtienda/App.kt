@@ -2,6 +2,7 @@ package com.example.bottomnavtienda
 
 import android.app.Application
 import com.example.bottomnavtienda.di.dataSourceModule
+import com.example.bottomnavtienda.di.databaseModule
 import com.example.bottomnavtienda.di.repoModule
 import com.example.bottomnavtienda.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -13,7 +14,7 @@ class App:Application() {
         super.onCreate()
         startKoin {
             androidContext(this@App)
-            modules(listOf(dataSourceModule, repoModule, viewModelModule))
+            modules(listOf(dataSourceModule, repoModule, databaseModule, viewModelModule))
         }
     }
 }

@@ -46,7 +46,7 @@ class ProductFragment : Fragment() {
         )
         productAdapter.listener = object: OnProductListener {
             override fun onClick(product: Product) {
-                Log.d("CLICK",product.name!!)
+                Log.d("CLICK",  product.name ?: "No name for product")
                 productViewModel.selectedProduct(product)
                 findNavController().navigate(R.id.action_productFragment_to_productDetailFragment)
             }
